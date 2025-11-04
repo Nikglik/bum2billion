@@ -30,3 +30,25 @@ h1 { font-size: 18px; margin: 0; }
 .btn.secondary { background:#2a2f45; }
 .btn:disabled { background:#40445e; opacity:.7; }
 footer { display:flex; gap:10px; justify-content:center; }
+/* Add/replace these blocks in your styles.css */
+
+#belly { width: 260px; transition: transform .08s ease; cursor: pointer; user-select:none; }
+#belly.tap { transform: scale(0.94) rotate(-2deg); }
+
+/* Floating coin particles */
+.particle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 20px;
+  color: #ffd866;
+  opacity: 0;
+  animation: floatUp .7s ease-out forwards;
+  pointer-events: none;
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
+}
+@keyframes floatUp {
+  0%   { opacity: 0; transform: translate(-50%, -20%) scale(0.9); }
+  10%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(-50%, -80%) scale(1.1); }
+}
